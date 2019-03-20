@@ -1,0 +1,21 @@
+{
+  "name": "sheets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "better-sqlite3": "^5.4.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "handlebars": "^4.1.1"
+  }
+}
