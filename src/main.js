@@ -15,7 +15,7 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static('./web'));
+app.use(express.static('./static/'));
 
 function createSession(userid) {
   return db.prepare('INSERT INTO sessions(uid) VALUES(?)').run(userid).id;
