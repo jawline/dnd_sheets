@@ -1,0 +1,29 @@
+<script>
+function create(details) {
+
+  const toon = {
+    name: $('#charname').val()
+  };
+
+  $.ajax({
+    url: '/character',
+    type: "POST",
+    data: JSON.stringify(toon),
+    dataType: "json",
+    contentType: "application/json",
+    success: function(result) {
+      window.location = "/main"
+    },
+    error : function(request, textStatus, errorThrown) {},
+  });
+
+  return false;
+}
+</script>
+
+<form onsubmit="return create(this)" action="#">
+  <div class="form-group"> 
+    <input id="charname" type="text" class="form-control" name="charactername" placeholder="Name">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

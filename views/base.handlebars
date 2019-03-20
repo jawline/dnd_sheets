@@ -1,0 +1,18 @@
+<script>
+  $.ajax({
+    url: '/character',
+    type: "GET",
+    dataType: 'json',
+    success: function(res) {
+      res.forEach(item => {
+        console.log(item.name);
+        $('#characters').append('<tr><td><a href="/view_character?id=' + item.id + '">' + item.name + '</a></td></tr>');
+      });
+    }
+  });
+</script>
+
+<table class="table" id="characters">
+</table>
+
+<a href="/new_character">New Character</a>

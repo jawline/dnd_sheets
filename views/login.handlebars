@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <script src="./js/jquery.js"></script>
-  <script src="./js/bootstrap.bundle.js"></script>
-  <script>
+<script>
     $(() => {
       if (new URL(document.location).searchParams.get('bad')) {
         $('#badalert').show();
@@ -14,9 +7,6 @@
       }
     });
   </script>
-</head>
-
-<body>
 
 <h3>Login</h3>
 
@@ -30,5 +20,4 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-</body>
-</html>
+<a href="/register">Register</a>
